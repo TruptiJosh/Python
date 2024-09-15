@@ -1,0 +1,120 @@
+# Q Assume that we execute the following assignment statements: width = 17 height = 12.0 
+#For each of the following expressions, write the value of the expression and the type (of the value of the expression).
+
+# width/2
+# width/2.0
+# height/3
+# 1 + 2 * 5 Use the Python interpreter to check your answers.
+
+
+Ans:
+width = 17
+height = 12.0
+print(width/2)
+print(type(width/2))
+
+print(width/2.0)
+print(type(width/2.0))
+
+print(height/3)
+print(type(height/3))
+
+Q:#Take a string separated by comma, then take a number as an input n.
+#Write a Python program to split a string on the last n  occurrence  of the delimiter
+#input: h,e,l,l,o
+#enter a number: 3
+#output: ['h,e', 'l', 'l', 'o']
+#input: G,r,e,a,t
+#enter a number: 2
+#o/p= ['G,r,e', 'a', 't']
+
+A) string1= 'G,r,e,a,t'
+num = 2
+string1.rsplit(',',num)
+
+Q)# Write a Python program to change a given string to a new string where the first and 
+#last chars have been exchanged.
+
+A)string = 'Python'
+string_new = string[-1]+string[1:-1]+string[0]
+print(string_new)
+
+#Q.Given a string, return a new string where "not " has been added to the front. 
+A) string = 'good'
+string = 'not'+string
+print(string)
+
+
+#Q # Write a Python program to get the 4th element and 4th element from last of a tuple.
+tup = (1,2,3,4,5,6,7)
+tup[3], tup[-4]
+
+#Q. #Give the sum of the last 3 elements of the tuple: use sum() function 
+sum(tup[-3:])
+
+#Q # Take the input as primes=(3,5,7,11,13,11,7) and count the number of 11 
+primes=(3,5,7,11,13,11,7)
+primes.count(11)
+
+Q # Write a Python program to display the first and last colors from the following list.
+# color_list = ["Red","Green","White" ,"Black"]
+A) color_list = ["Red","Green","White" ,"Black"]
+color_list[0], color_list[-1]
+
+Q) # n_list = ["Happy", [2,0,1,5]]
+# #Display in the below format: H and 2 separately
+# #input: n_list = ["Happy", [2,0,1,5]]
+# #Output: H+2
+
+
+n_list = ["Happy", [2,0,1,5]]
+n_list[0][0]+'+'+str(n_list[1][0])
+
+Q) # Input:
+# # List1 = [15, 300, 2700, 821]
+# # List2 = [12, 2]
+# # List3 = [34, 567, 78]
+# #Output: '2700 12 567'
+
+List1 = [15, 300, 2700, 821]
+List2 = [12, 2]
+List3 = [34, 567, 78]
+
+print(max(List1),max(List2), max(List3))
+
+
+q) # Add item 7000 after 6000 in the following Python List
+# #Input: list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+# #Output: [10, 20, [300, 400, [5000, 6000, 7000], 500], 30, 40]
+A) list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+list1[2][2].append(7000)
+list1
+
+Q) # Given a nested list and  a sub list ["h", "i", "j"] 
+# # print the output in a such a way that it will look like the following list
+# #Input: list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+# #Output: ['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+
+A) list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+list1[2][1][2].extend(["h", "i", "j"] )
+list1
+
+
+
+# If all the elements of the list are equal print "All element are equal" returm True
+set([1,1,1,1,2])
+if len(set([1,1,1,1,2])) == 1:
+    print(True)
+
+# Write a program to input a list and calculate the sum of all positive and negative numbers in the list.
+#List for sure contains a 0
+
+# [2,3,-5,-7,-4,0,2,6,7,-8]
+list1 =  [2,3,-5,-7,-4,0,2,6,7,-8]
+sorted_list = sorted(list1)
+index_of_zero = sorted_list.index(0)
+print(sum(sorted_list[:index_of_zero]))
+print(sum(sorted_list[index_of_zero:]))
+
+
+
